@@ -39,7 +39,6 @@ public class TallerController {
 
     private final TallerService tallerService;
 
-    // ---------- CRUD de talleres ----------
 
     @PostMapping
     @Operation(summary = "Crear un taller",
@@ -127,7 +126,6 @@ public class TallerController {
         return ResponseEntity.noContent().build();
     }
 
-    // ---------- Inscripciones (M:M) ----------
 
     @PostMapping("/{tallerId}/participantes/{participanteId}")
     @Operation(summary = "Inscribir un participante en un taller",
